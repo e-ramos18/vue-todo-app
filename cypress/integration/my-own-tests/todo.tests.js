@@ -4,7 +4,7 @@ describe('Basic Test', () => {
 
   beforeEach(() => {
     cy.viewport(1280, 720)
-    // should be the url of the todo app
+    // should be the url of the todo-list app
     cy.visit('https://vue-todo-list-5970d.web.app/') // todo-app(firebase hosted)
   })
 
