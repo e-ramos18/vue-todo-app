@@ -36,7 +36,7 @@ describe('Basic Test', () => {
     cy.get('[data-testid=btnSubmit]').click()
     cy.contains(`todo-${random}`).should('exist')
     cy.contains('Are you sure you want to delete?').should('not.exist')
-    cy.get('[data-testid=btnDelete-0').click()
+    cy.get('[data-testid=btnDelete-0', {timeout: 3 * 1000}).click()
     cy.contains('Are you sure you want to delete?').should('exist')
     cy.get('[data-testid=deleteTodo]').click()
     cy.contains(`todo-${random}`, {timeout: 3 * 1000}).should('not.exist')
